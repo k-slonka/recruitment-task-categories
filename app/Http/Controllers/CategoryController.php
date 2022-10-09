@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Translations\CategoryTranslation;
 use App\Events\AddCategory;
 use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Resources\CategoryResource;
 
 class CategoryController extends Controller
 {
@@ -18,7 +19,8 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         \App::setlocale($request->header('locale'));
-        return response()->json(Category::get())->setStatusCode(200);
+        $categories = Category::get();
+        return (CategoryResource::collection($categories))->response()->setStatusCode(200);
     }
 
     /**
