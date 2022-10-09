@@ -32,56 +32,56 @@ class CategorySeeder extends Seeder
             [
                 'category_id' => 1,
                 'name' => 'drzwi',
-                'locale' => 'pl',
+                'locale' => 'PL',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'category_id' => 1,
                 'name' => 'doors',
-                'locale' => 'en',
+                'locale' => 'EN',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'category_id' => 1,
                 'name' => 'deuren',
-                'locale' => 'de',
+                'locale' => 'DE',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'category_id' => 1,
                 'name' => 'des portes',
-                'locale' => 'fr',
+                'locale' => 'FR',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'category_id' => 2,
                 'name' => 'okna',
-                'locale' => 'pl',
+                'locale' => 'PL',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'category_id' => 2,
                 'name' => 'windows',
-                'locale' => 'en',
+                'locale' => 'EN',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'category_id' => 2,
                 'name' => 'ramen',
-                'locale' => 'de',
+                'locale' => 'DE',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],
             [
                 'category_id' => 2,
                 'name' => 'les fenêtres',
-                'locale' => 'fr',
+                'locale' => 'FR',
                 'created_at' => Carbon::now()->format('Y-m-d H:i:s'),
                 'updated_at' => Carbon::now()->format('Y-m-d H:i:s')
             ],

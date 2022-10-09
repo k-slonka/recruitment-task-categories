@@ -13,10 +13,9 @@ class CategoryTest extends TestCase
      */
     public function test_create_category()
     {
-        $response = $this->withHeaders([
-            'Locale' => 'pl',
-        ])->json('POST', 'api/categories', [
+        $response = $this->json('POST', 'api/categories', [
             'name' => 'test_add_category_pl',
+            'locale' => 'PL'
         ]);
 
         $response->assertStatus(201);
@@ -30,7 +29,7 @@ class CategoryTest extends TestCase
     public function test_get_categories()
     {
         $response = $this->withHeaders([
-            'Locale' => 'pl',
+            'locale' => 'PL',
         ])->json('GET', 'api/categories');
 
         $response->assertStatus(200);

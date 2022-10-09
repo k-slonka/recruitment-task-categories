@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Translations\CategoryTranslation;
 use App\Events\AddCategory;
+use App\Http\Requests\StoreCategoryRequest;
 
 class CategoryController extends Controller
 {
@@ -14,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index(Request $request)
     {
-        \App::setlocale($request->header('Locale'));
+        \App::setlocale($request->header('locale'));
         return response()->json(Category::get())->setStatusCode(200);
     }
 
@@ -22,13 +23,13 @@ class CategoryController extends Controller
      * Create new category
      */
     //TODO -- add request
-    public function store(Request $request)
+    public function store(StoreCategoryRequest $request)
     {
         $category = Category::create();
         $categoryTranslation = new CategoryTranslation;
         $categoryTranslation->category_id = $category->id;
         $categoryTranslation->name = $request->name;
-        $categoryTranslation->locale = $request->header('Locale');
+        $categoryTranslation->locale = $request->locale;
         $categoryTranslation->save();
 
         event(new AddCategory($category));
