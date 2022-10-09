@@ -63,7 +63,7 @@ abstract class LocalizableModel extends Model
     }
 
     /**
-     * Magic method for retrieving a missing attribute
+     * Method for retrieving a missing attribute
      *
      * @param string $attribute
      * @return mixed

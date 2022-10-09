@@ -12,6 +12,8 @@ class CategoryController extends Controller
 {
     /**
      * Get all categories
+     *
+     * @param Request $request
      */
     public function index(Request $request)
     {
@@ -21,8 +23,9 @@ class CategoryController extends Controller
 
     /**
      * Create new category
+     *
+     * @param StoreCategoryRequest $request
      */
-    //TODO -- add request
     public function store(StoreCategoryRequest $request)
     {
         $category = Category::create();
